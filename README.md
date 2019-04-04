@@ -1,4 +1,4 @@
-# POSTECHX *Advanced Smart Contracts & Decentralization Application* course project
+# POSTECHX *Advanced Smart Contracts & Decentralized Applications* course project
 
 This is the course project for the following courses on [POSTECH MOOC](https://nm.smartlearn.kr/).
 
