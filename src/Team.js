@@ -4,24 +4,26 @@ import './App.css';
 class Team extends Component {
   state = {
     response: [
-      {name: 'jwkhong', url: 'assets/jwkhong.jpg'},
-      {name: 'eyyoun', url: 'assets/eyyoun.gif'},
-      {name: 'hwanjoyu', url: 'assets/hwanjoyu.gif'},
-      {name: 'hyelee', url: 'assets/hyelee.jpg'},
-      {name: 'wschae', url: 'assets/wschae.jpg'},
-      {name: 'kyungchan', url: 'assets/kyungchan.jpg'},
-      {name: 'swkim', url: 'assets/swkim.jpg'},
-      {name: 'jskim', url: 'assets/jskim.jpg'},
-      {name: 'cyoh', url: 'assets/cyoh.jpg'},
-      {name: 'limseok', url: 'assets/limseok.jpg'},
-      {name: 'johnson', url: 'assets/johnson.jpg'}
+      {name: 'jwkhong', cid: 'QmegwUNQ1Fivdh88eS9e8eq4kHyvW51Q95ktBKWQLnQRs2'},
+      {name: 'eyyoun', cid: 'QmYNNiVzm8uhnsg9WdXuXsJEvgZhm948n8nzMbTvvYpxRW'},
+      {name: 'hwanjoyu', cid: 'QmYUyEaWSoy5fQq8LDrEVEKqWiVDFAbAf65ZzwSNoFLsTt'},
+      {name: 'hyelee', cid: 'QmbEErCe1G75AudXuQLdXpDx943UrY4F7naSozAydw3Ree'},
+      {name: 'wschae', cid: 'Qmdj1eKzwbR8d3BygjNYB22RP9ovVKMfPt4CR6cFrLYaLY'},
+      {name: 'kyungchan', cid: 'QmVxxNFBjaGr2vyDWWvjn8wtfQB6X3jqYoVmrWxSFr5jpA'},
+      {name: 'swkim', cid: 'QmNeNr5aSTiH6xDMJGEWeLVhMw967A3YQNDurNax1RPSAZ'},
+      {name: 'jskim', cid: 'QmWeS7u5pDTkyBBKaw3ywJs2yXS4pftQEy2PiYfNWpGQnQ'},
+      {name: 'cyoh', cid: 'QmT65VLCj2K5YW7k4Tomagg1VTz6fCtvSPJk1FCFpvT3wf'},
+      {name: 'limseok', cid: 'QmSRejaN4iY4EJSxAzjD9XXw29o3AD5DhKbWe2SkGhQ3vu'},
+      {name: 'johnson', cid: 'QmaF5m9g6jm7ZainvX3JxLp1c6WXoNH6Js4macN7F14b2q'}
     ]
   }
 
   render() {
     const items = this.state.response.map((item) => {
+      const url = `https://ipfs.io/ipfs/${item.cid}`;
+
       const liststyle = {
-        backgroundImage: `url(${item.url})`,
+        backgroundImage: `url(${url})`,
         backgroundSize: '100px',
         height: '100px',
         width: '100px',
@@ -43,7 +45,7 @@ class Team extends Component {
       };
 
       return (
-        <li className='hover-image' key={item.url}>
+        <li className='hover-image' key={url}>
           <div style={liststyle}> 
             <span  style={namestyle} className='hover-image--on'>
                 {item.name}
