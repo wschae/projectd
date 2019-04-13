@@ -14,7 +14,7 @@ class App extends Component {
         </ul>
         <div className="content">
           <Route exact path="/" component={Home}/>
-          <Route path="/team" component={Team}/>
+          <Route path="/team" render={(props) => <Team drizzle={this.props.drizzle} />} />
         </div>
       </HashRouter>
     );
