@@ -1,0 +1,1201 @@
+{
+  "contractName": "Team",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "members",
+      "outputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "cid",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x5daf08ca"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "cid",
+          "type": "string"
+        }
+      ],
+      "name": "addMember",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xea6c38ef"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "countMembers",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x2cd046eb"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getMembers",
+      "outputs": [
+        {
+          "components": [
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "cid",
+              "type": "string"
+            }
+          ],
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x9eab5253"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"countMembers\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"members\",\"outputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"cid\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getMembers\",\"outputs\":[{\"components\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"cid\",\"type\":\"string\"}],\"name\":\"\",\"type\":\"tuple[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"cid\",\"type\":\"string\"}],\"name\":\"addMember\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/E/github/truffle/projectd/truffle/contracts/Team.sol\":\"Team\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/github/truffle/projectd/truffle/contracts/Team.sol\":{\"keccak256\":\"0x52cbd64e0c8b5a41345c16829d4d1c453941ffcbef9fee4d657ebb66dc7a1f3e\",\"urls\":[\"bzzr://bdb1b6a8265f220416debeed7d7d4347904c5287cb626ec7d8123612d82a97a3\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506108f2806100206000396000f3fe608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632cd046eb146100675780635daf08ca146100925780639eab5253146100d0578063ea6c38ef146100fb575b600080fd5b34801561007357600080fd5b5061007c610124565b60405161008991906107ad565b60405180910390f35b34801561009e57600080fd5b506100b960048036036100b49190810190610634565b610130565b6040516100c7929190610776565b60405180910390f35b3480156100dc57600080fd5b506100e5610293565b6040516100f29190610754565b60405180910390f35b34801561010757600080fd5b50610122600480360361011d91908101906105c8565b610436565b005b60008080549050905090565b60008181548110151561013f57fe5b9060005260206000209060020201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101eb5780601f106101c0576101008083540402835291602001916101eb565b820191906000526020600020905b8154815290600101906020018083116101ce57829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102895780601f1061025e57610100808354040283529160200191610289565b820191906000526020600020905b81548152906001019060200180831161026c57829003601f168201915b5050505050905082565b60606000805480602002602001604051908101604052809291908181526020016000905b8282101561042d5783829060005260206000209060020201604080519081016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103735780601f1061034857610100808354040283529160200191610373565b820191906000526020600020905b81548152906001019060200180831161035657829003601f168201915b50505050508152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104155780601f106103ea57610100808354040283529160200191610415565b820191906000526020600020905b8154815290600101906020018083116103f857829003601f168201915b505050505081525050815260200190600101906102b7565b50505050905090565b60006040805190810160405280848152602001838152509080600181540180825580915050906001820390600052602060002090600202016000909192909190915060008201518160000190805190602001906104949291906104b9565b5060208201518160010190805190602001906104b19291906104b9565b505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104fa57805160ff1916838001178555610528565b82800160010185558215610528579182015b8281111561052757825182559160200191906001019061050c565b5b5090506105359190610539565b5090565b61055b91905b8082111561055757600081600090555060010161053f565b5090565b90565b600082601f830112151561057157600080fd5b813561058461057f826107f5565b6107c8565b915080825260208301602083018583830111156105a057600080fd5b6105ab838284610865565b50505092915050565b60006105c0823561085b565b905092915050565b600080604083850312156105db57600080fd5b600083013567ffffffffffffffff8111156105f557600080fd5b6106018582860161055e565b925050602083013567ffffffffffffffff81111561061e57600080fd5b61062a8582860161055e565b9150509250929050565b60006020828403121561064657600080fd5b6000610654848285016105b4565b91505092915050565b60006106688261082e565b8084526020840193508360208202850161068185610821565b60005b848110156106ba57838303885261069c838351610701565b92506106a782610844565b9150602088019750600181019050610684565b508196508694505050505092915050565b60006106d682610839565b8084526106ea816020860160208601610874565b6106f3816108a7565b602085010191505092915050565b6000604083016000830151848203600086015261071e82826106cb565b9150506020830151848203602086015261073882826106cb565b9150508091505092915050565b61074e81610851565b82525050565b6000602082019050818103600083015261076e818461065d565b905092915050565b6000604082019050818103600083015261079081856106cb565b905081810360208301526107a481846106cb565b90509392505050565b60006020820190506107c26000830184610745565b92915050565b6000604051905081810181811067ffffffffffffffff821117156107eb57600080fd5b8060405250919050565b600067ffffffffffffffff82111561080c57600080fd5b601f19601f8301169050602081019050919050565b6000602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b6000819050919050565b6000819050919050565b82818337600083830152505050565b60005b83811015610892578082015181840152602081019050610877565b838111156108a1576000848401525b50505050565b6000601f19601f830116905091905056fea265627a7a72305820b5a67bcbd29bb22a620c3832f88783e10ed29d5b5cd3f2f1b6592fafad23cb076c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632cd046eb146100675780635daf08ca146100925780639eab5253146100d0578063ea6c38ef146100fb575b600080fd5b34801561007357600080fd5b5061007c610124565b60405161008991906107ad565b60405180910390f35b34801561009e57600080fd5b506100b960048036036100b49190810190610634565b610130565b6040516100c7929190610776565b60405180910390f35b3480156100dc57600080fd5b506100e5610293565b6040516100f29190610754565b60405180910390f35b34801561010757600080fd5b50610122600480360361011d91908101906105c8565b610436565b005b60008080549050905090565b60008181548110151561013f57fe5b9060005260206000209060020201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101eb5780601f106101c0576101008083540402835291602001916101eb565b820191906000526020600020905b8154815290600101906020018083116101ce57829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102895780601f1061025e57610100808354040283529160200191610289565b820191906000526020600020905b81548152906001019060200180831161026c57829003601f168201915b5050505050905082565b60606000805480602002602001604051908101604052809291908181526020016000905b8282101561042d5783829060005260206000209060020201604080519081016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103735780601f1061034857610100808354040283529160200191610373565b820191906000526020600020905b81548152906001019060200180831161035657829003601f168201915b50505050508152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104155780601f106103ea57610100808354040283529160200191610415565b820191906000526020600020905b8154815290600101906020018083116103f857829003601f168201915b505050505081525050815260200190600101906102b7565b50505050905090565b60006040805190810160405280848152602001838152509080600181540180825580915050906001820390600052602060002090600202016000909192909190915060008201518160000190805190602001906104949291906104b9565b5060208201518160010190805190602001906104b19291906104b9565b505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104fa57805160ff1916838001178555610528565b82800160010185558215610528579182015b8281111561052757825182559160200191906001019061050c565b5b5090506105359190610539565b5090565b61055b91905b8082111561055757600081600090555060010161053f565b5090565b90565b600082601f830112151561057157600080fd5b813561058461057f826107f5565b6107c8565b915080825260208301602083018583830111156105a057600080fd5b6105ab838284610865565b50505092915050565b60006105c0823561085b565b905092915050565b600080604083850312156105db57600080fd5b600083013567ffffffffffffffff8111156105f557600080fd5b6106018582860161055e565b925050602083013567ffffffffffffffff81111561061e57600080fd5b61062a8582860161055e565b9150509250929050565b60006020828403121561064657600080fd5b6000610654848285016105b4565b91505092915050565b60006106688261082e565b8084526020840193508360208202850161068185610821565b60005b848110156106ba57838303885261069c838351610701565b92506106a782610844565b9150602088019750600181019050610684565b508196508694505050505092915050565b60006106d682610839565b8084526106ea816020860160208601610874565b6106f3816108a7565b602085010191505092915050565b6000604083016000830151848203600086015261071e82826106cb565b9150506020830151848203602086015261073882826106cb565b9150508091505092915050565b61074e81610851565b82525050565b6000602082019050818103600083015261076e818461065d565b905092915050565b6000604082019050818103600083015261079081856106cb565b905081810360208301526107a481846106cb565b90509392505050565b60006020820190506107c26000830184610745565b92915050565b6000604051905081810181811067ffffffffffffffff821117156107eb57600080fd5b8060405250919050565b600067ffffffffffffffff82111561080c57600080fd5b601f19601f8301169050602081019050919050565b6000602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b6000819050919050565b6000819050919050565b82818337600083830152505050565b60005b83811015610892578082015181840152602081019050610877565b838111156108a1576000848401525b50505050565b6000601f19601f830116905091905056fea265627a7a72305820b5a67bcbd29bb22a620c3832f88783e10ed29d5b5cd3f2f1b6592fafad23cb076c6578706572696d656e74616cf50037",
+  "sourceMap": "71:471:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:471:1;;;;;;;",
+  "deployedSourceMap": "71:471:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;343:91;;8:9:-1;5:2;;;30:1;27;20:12;5:2;343:91:1;;;;;;;;;;;;;;;;;;;;169:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;169:23:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;446:93;;8:9:-1;5:2;;;30:1;27;20:12;5:2;446:93:1;;;;;;;;;;;;;;;;;;;;205:126;;8:9:-1;5:2;;;30:1;27;20:12;5:2;205:126:1;;;;;;;;;;;;;;;;;;;343:91;388:4;412:7;:14;;;;405:21;;343:91;:::o;169:23::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;446:93::-;489:15;524:7;517:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;446:93;:::o;205:126::-;281:7;294:28;;;;;;;;;307:4;294:28;;;;317:3;294:28;;;281:42;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;281:42:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;205:126;;:::o;71:471::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;6:442:-1:-;;108:3;101:4;93:6;89:17;85:27;78:35;75:2;;;126:1;123;116:12;75:2;163:6;150:20;185:65;200:49;242:6;200:49;;;185:65;;;176:74;;270:6;263:5;256:21;306:4;298:6;294:17;339:4;332:5;328:16;374:3;365:6;360:3;356:16;353:25;350:2;;;391:1;388;381:12;350:2;401:41;435:6;430:3;425;401:41;;;68:380;;;;;;;;456:118;;523:46;561:6;548:20;523:46;;;514:55;;508:66;;;;;581:578;;;722:2;710:9;701:7;697:23;693:32;690:2;;;738:1;735;728:12;690:2;801:1;790:9;786:17;773:31;824:18;816:6;813:30;810:2;;;856:1;853;846:12;810:2;876:63;931:7;922:6;911:9;907:22;876:63;;;866:73;;752:193;1004:2;993:9;989:18;976:32;1028:18;1020:6;1017:30;1014:2;;;1060:1;1057;1050:12;1014:2;1080:63;1135:7;1126:6;1115:9;1111:22;1080:63;;;1070:73;;955:194;684:475;;;;;;1166:241;;1270:2;1258:9;1249:7;1245:23;1241:32;1238:2;;;1286:1;1283;1276:12;1238:2;1321:1;1338:53;1383:7;1374:6;1363:9;1359:22;1338:53;;;1328:63;;1300:97;1232:175;;;;;1467:857;;1638:72;1704:5;1638:72;;;1728:6;1723:3;1716:19;1752:4;1747:3;1743:14;1736:21;;1800:3;1842:4;1834:6;1830:17;1825:3;1821:27;1868:74;1936:5;1868:74;;;1963:1;1948:337;1973:6;1970:1;1967:13;1948:337;;;2035:9;2029:4;2025:20;2020:3;2013:33;2061:94;2150:4;2141:6;2135:13;2061:94;;;2053:102;;2172:78;2243:6;2172:78;;;2162:88;;2273:4;2268:3;2264:14;2257:21;;1995:1;1992;1988:9;1983:14;;1948:337;;;1952:14;2298:4;2291:11;;2315:3;2308:10;;1617:707;;;;;;;;;2332:292;;2430:35;2459:5;2430:35;;;2482:6;2477:3;2470:19;2494:63;2550:6;2543:4;2538:3;2534:14;2527:4;2520:5;2516:16;2494:63;;;2589:29;2611:6;2589:29;;;2582:4;2577:3;2573:14;2569:50;2562:57;;2410:214;;;;;;2678:618;;2809:4;2804:3;2800:14;2895:3;2888:5;2884:15;2878:22;2944:3;2938:4;2934:14;2928:3;2923;2919:13;2912:37;2964:68;3027:4;3014:11;2964:68;;;2956:76;;2829:215;3119:4;3112:5;3108:16;3102:23;3170:3;3164:4;3160:14;3153:4;3148:3;3144:14;3137:38;3190:68;3253:4;3240:11;3190:68;;;3182:76;;3054:216;3287:4;3280:11;;2782:514;;;;;;3303:110;3376:31;3401:5;3376:31;;;3371:3;3364:44;3358:55;;;3420:413;;3614:2;3603:9;3599:18;3591:26;;3664:9;3658:4;3654:20;3650:1;3639:9;3635:17;3628:47;3689:134;3818:4;3809:6;3689:134;;;3681:142;;3585:248;;;;;3840:454;;4008:2;3997:9;3993:18;3985:26;;4058:9;4052:4;4048:20;4044:1;4033:9;4029:17;4022:47;4083:64;4142:4;4133:6;4083:64;;;4075:72;;4195:9;4189:4;4185:20;4180:2;4169:9;4165:18;4158:48;4220:64;4279:4;4270:6;4220:64;;;4212:72;;3979:315;;;;;;4301:193;;4409:2;4398:9;4394:18;4386:26;;4423:61;4481:1;4470:9;4466:17;4457:6;4423:61;;;4380:114;;;;;4501:256;;4563:2;4557:9;4547:19;;4601:4;4593:6;4589:17;4700:6;4688:10;4685:22;4664:18;4652:10;4649:34;4646:62;4643:2;;;4721:1;4718;4711:12;4643:2;4741:10;4737:2;4730:22;4541:216;;;;;4764:259;;4908:18;4900:6;4897:30;4894:2;;;4940:1;4937;4930:12;4894:2;4984:4;4980:9;4973:4;4965:6;4961:17;4957:33;4949:41;;5013:4;5007;5003:15;4995:23;;4831:192;;;;5032:139;;5159:4;5151:6;5147:17;5136:28;;5128:43;;;;5180:125;;5294:5;5288:12;5278:22;;5272:33;;;;5312:88;;5389:5;5383:12;5373:22;;5367:33;;;;5408:140;;5537:4;5529:6;5525:17;5514:28;;5507:41;;;;5556:79;;5625:5;5614:16;;5608:27;;;;5642:79;;5711:5;5700:16;;5694:27;;;;5729:145;5810:6;5805:3;5800;5787:30;5866:1;5857:6;5852:3;5848:16;5841:27;5780:94;;;;5883:268;5948:1;5955:101;5969:6;5966:1;5963:13;5955:101;;;6045:1;6040:3;6036:11;6030:18;6026:1;6021:3;6017:11;6010:39;5991:2;5988:1;5984:10;5979:15;;5955:101;;;6071:6;6068:1;6065:13;6062:2;;;6136:1;6127:6;6122:3;6118:16;6111:27;6062:2;5932:219;;;;;6159:97;;6247:2;6243:7;6238:2;6231:5;6227:14;6223:28;6213:38;;6207:49;;;",
+  "source": "pragma solidity >=0.4.22 <0.7.0;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract Team {\r\n    struct Member {\r\n        string name;\r\n        string cid;\r\n    }\r\n    \r\n    Member[] public members;\r\n    \r\n    function addMember(string memory name, string memory cid) public {\r\n        members.push(Member({name:name, cid:cid}));\r\n    }\r\n    \r\n    function countMembers() public view returns (uint) {\r\n        return members.length;\r\n    }\r\n    \r\n    function getMembers() public view returns (Member[] memory) {\r\n        return members;\r\n    }\r\n}\r\n",
+  "sourcePath": "E:/github/truffle/projectd/truffle/contracts/Team.sol",
+  "ast": {
+    "absolutePath": "/E/github/truffle/projectd/truffle/contracts/Team.sol",
+    "exportedSymbols": {
+      "Team": [
+        103
+      ]
+    },
+    "id": 104,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "id": 59,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 103,
+        "linearizedBaseContracts": [
+          103
+        ],
+        "name": "Team",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Team.Member",
+            "id": 64,
+            "members": [
+              {
+                "constant": false,
+                "id": 61,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 64,
+                "src": "117:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 60,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "117:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 63,
+                "name": "cid",
+                "nodeType": "VariableDeclaration",
+                "scope": 64,
+                "src": "139:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 62,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "139:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Member",
+            "nodeType": "StructDefinition",
+            "scope": 103,
+            "src": "92:65:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 67,
+            "name": "members",
+            "nodeType": "VariableDeclaration",
+            "scope": 103,
+            "src": "169:23:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage",
+              "typeString": "struct Team.Member[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 65,
+                "name": "Member",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 64,
+                "src": "169:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Member_$64_storage_ptr",
+                  "typeString": "struct Team.Member"
+                }
+              },
+              "id": 66,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "169:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage_ptr",
+                "typeString": "struct Team.Member[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 83,
+              "nodeType": "Block",
+              "src": "270:61:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 78,
+                            "name": "name",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 69,
+                            "src": "307:4:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 79,
+                            "name": "cid",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 71,
+                            "src": "317:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 77,
+                          "name": "Member",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 64,
+                          "src": "294:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Member_$64_storage_ptr_$",
+                            "typeString": "type(struct Team.Member storage pointer)"
+                          }
+                        },
+                        "id": 80,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "name",
+                          "cid"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "294:28:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Member_$64_memory",
+                          "typeString": "struct Team.Member memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Member_$64_memory",
+                          "typeString": "struct Team.Member memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 74,
+                        "name": "members",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 67,
+                        "src": "281:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage",
+                          "typeString": "struct Team.Member storage ref[] storage ref"
+                        }
+                      },
+                      "id": 76,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "281:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Member_$64_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Team.Member storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 81,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "281:42:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 82,
+                  "nodeType": "ExpressionStatement",
+                  "src": "281:42:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 84,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addMember",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 69,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 84,
+                  "src": "224:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "224:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 71,
+                  "name": "cid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 84,
+                  "src": "244:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 70,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "223:39:1"
+            },
+            "returnParameters": {
+              "id": 73,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "270:0:1"
+            },
+            "scope": 103,
+            "src": "205:126:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 92,
+              "nodeType": "Block",
+              "src": "394:40:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 89,
+                      "name": "members",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 67,
+                      "src": "412:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage",
+                        "typeString": "struct Team.Member storage ref[] storage ref"
+                      }
+                    },
+                    "id": 90,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "412:14:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 88,
+                  "id": 91,
+                  "nodeType": "Return",
+                  "src": "405:21:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 93,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "countMembers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:2:1"
+            },
+            "returnParameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 87,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 93,
+                  "src": "388:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 86,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "388:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "387:6:1"
+            },
+            "scope": 103,
+            "src": "343:91:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 101,
+              "nodeType": "Block",
+              "src": "506:33:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 99,
+                    "name": "members",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 67,
+                    "src": "524:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage",
+                      "typeString": "struct Team.Member storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 98,
+                  "id": 100,
+                  "nodeType": "Return",
+                  "src": "517:14:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 102,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMembers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "465:2:1"
+            },
+            "returnParameters": {
+              "id": 98,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 97,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 102,
+                  "src": "489:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Member_$64_memory_$dyn_memory_ptr",
+                    "typeString": "struct Team.Member[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 95,
+                      "name": "Member",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 64,
+                      "src": "489:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Member_$64_storage_ptr",
+                        "typeString": "struct Team.Member"
+                      }
+                    },
+                    "id": 96,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "489:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage_ptr",
+                      "typeString": "struct Team.Member[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:17:1"
+            },
+            "scope": 103,
+            "src": "446:93:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 104,
+        "src": "71:471:1"
+      }
+    ],
+    "src": "0:544:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/github/truffle/projectd/truffle/contracts/Team.sol",
+    "exportedSymbols": {
+      "Team": [
+        103
+      ]
+    },
+    "id": 104,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "id": 59,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 103,
+        "linearizedBaseContracts": [
+          103
+        ],
+        "name": "Team",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Team.Member",
+            "id": 64,
+            "members": [
+              {
+                "constant": false,
+                "id": 61,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 64,
+                "src": "117:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 60,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "117:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 63,
+                "name": "cid",
+                "nodeType": "VariableDeclaration",
+                "scope": 64,
+                "src": "139:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 62,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "139:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Member",
+            "nodeType": "StructDefinition",
+            "scope": 103,
+            "src": "92:65:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 67,
+            "name": "members",
+            "nodeType": "VariableDeclaration",
+            "scope": 103,
+            "src": "169:23:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage",
+              "typeString": "struct Team.Member[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 65,
+                "name": "Member",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 64,
+                "src": "169:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Member_$64_storage_ptr",
+                  "typeString": "struct Team.Member"
+                }
+              },
+              "id": 66,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "169:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage_ptr",
+                "typeString": "struct Team.Member[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 83,
+              "nodeType": "Block",
+              "src": "270:61:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 78,
+                            "name": "name",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 69,
+                            "src": "307:4:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 79,
+                            "name": "cid",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 71,
+                            "src": "317:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 77,
+                          "name": "Member",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 64,
+                          "src": "294:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Member_$64_storage_ptr_$",
+                            "typeString": "type(struct Team.Member storage pointer)"
+                          }
+                        },
+                        "id": 80,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "name",
+                          "cid"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "294:28:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Member_$64_memory",
+                          "typeString": "struct Team.Member memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Member_$64_memory",
+                          "typeString": "struct Team.Member memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 74,
+                        "name": "members",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 67,
+                        "src": "281:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage",
+                          "typeString": "struct Team.Member storage ref[] storage ref"
+                        }
+                      },
+                      "id": 76,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "281:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Member_$64_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Team.Member storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 81,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "281:42:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 82,
+                  "nodeType": "ExpressionStatement",
+                  "src": "281:42:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 84,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addMember",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 69,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 84,
+                  "src": "224:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "224:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 71,
+                  "name": "cid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 84,
+                  "src": "244:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 70,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "223:39:1"
+            },
+            "returnParameters": {
+              "id": 73,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "270:0:1"
+            },
+            "scope": 103,
+            "src": "205:126:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 92,
+              "nodeType": "Block",
+              "src": "394:40:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 89,
+                      "name": "members",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 67,
+                      "src": "412:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage",
+                        "typeString": "struct Team.Member storage ref[] storage ref"
+                      }
+                    },
+                    "id": 90,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "412:14:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 88,
+                  "id": 91,
+                  "nodeType": "Return",
+                  "src": "405:21:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 93,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "countMembers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:2:1"
+            },
+            "returnParameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 87,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 93,
+                  "src": "388:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 86,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "388:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "387:6:1"
+            },
+            "scope": 103,
+            "src": "343:91:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 101,
+              "nodeType": "Block",
+              "src": "506:33:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 99,
+                    "name": "members",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 67,
+                    "src": "524:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage",
+                      "typeString": "struct Team.Member storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 98,
+                  "id": 100,
+                  "nodeType": "Return",
+                  "src": "517:14:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 102,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMembers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "465:2:1"
+            },
+            "returnParameters": {
+              "id": 98,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 97,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 102,
+                  "src": "489:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Member_$64_memory_$dyn_memory_ptr",
+                    "typeString": "struct Team.Member[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 95,
+                      "name": "Member",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 64,
+                      "src": "489:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Member_$64_storage_ptr",
+                        "typeString": "struct Team.Member"
+                      }
+                    },
+                    "id": 96,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "489:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Member_$64_storage_$dyn_storage_ptr",
+                      "typeString": "struct Team.Member[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:17:1"
+            },
+            "scope": 103,
+            "src": "446:93:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 104,
+        "src": "71:471:1"
+      }
+    ],
+    "src": "0:544:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x563E75e5D269235431A2a23fbE87a865F068e494",
+      "transactionHash": "0x334d4c3ba9904561cdb4682d31d11cf6a484010c8c7129a9faf5c2b9ef8ca78f"
+    }
+  },
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-04-19T04:55:41.851Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,25 +1,46 @@
 import React, { Component } from 'react';
+import getWeb3 from './utils/getWeb3';
+import getContractInstance from './utils/getContractInstance';
+import TeamContract from './contracts/Team.json';
 import './App.css';
 
 class Team extends Component {
-  state = {
-    response: [
-      {name: 'jwkhong', cid: 'QmegwUNQ1Fivdh88eS9e8eq4kHyvW51Q95ktBKWQLnQRs2'},
-      {name: 'eyyoun', cid: 'QmYNNiVzm8uhnsg9WdXuXsJEvgZhm948n8nzMbTvvYpxRW'},
-      {name: 'hwanjoyu', cid: 'QmYUyEaWSoy5fQq8LDrEVEKqWiVDFAbAf65ZzwSNoFLsTt'},
-      {name: 'hyelee', cid: 'QmbEErCe1G75AudXuQLdXpDx943UrY4F7naSozAydw3Ree'},
-      {name: 'wschae', cid: 'Qmdj1eKzwbR8d3BygjNYB22RP9ovVKMfPt4CR6cFrLYaLY'},
-      {name: 'kyungchan', cid: 'QmVxxNFBjaGr2vyDWWvjn8wtfQB6X3jqYoVmrWxSFr5jpA'},
-      {name: 'swkim', cid: 'QmNeNr5aSTiH6xDMJGEWeLVhMw967A3YQNDurNax1RPSAZ'},
-      {name: 'jskim', cid: 'QmWeS7u5pDTkyBBKaw3ywJs2yXS4pftQEy2PiYfNWpGQnQ'},
-      {name: 'cyoh', cid: 'QmT65VLCj2K5YW7k4Tomagg1VTz6fCtvSPJk1FCFpvT3wf'},
-      {name: 'limseok', cid: 'QmSRejaN4iY4EJSxAzjD9XXw29o3AD5DhKbWe2SkGhQ3vu'},
-      {name: 'johnson', cid: 'QmaF5m9g6jm7ZainvX3JxLp1c6WXoNH6Js4macN7F14b2q'}
-    ]
+  state = { web3: null, contract: null, members: null };
+
+  componentDidMount = async () => {
+    try {
+      // Get network provider and web3 instance.
+      const web3 = await getWeb3()
+
+      // Get the contract instance by passing in web3 and the contract definition.
+      const contract = await getContractInstance(web3, TeamContract)
+
+      // Set web3, accounts, and contract to the state, and then proceed with an
+      // example of interacting with the contract's methods.
+      this.setState({ web3, contract }, this.run)
+    } catch (error) {
+      // Catch any errors for any of the above operations.
+      alert(`Failed to load web3, accounts, or contract. Check console for details.`)
+      console.log(error)
+    }
+  }
+
+  run = async() => {
+    const { contract } = this.state;
+
+    // Get the value from the contract
+    const response = await contract.methods.getMembers().call();
+
+    // Update state with the result.
+    this.setState({ members: response })
   }
 
   render() {
-    const items = this.state.response.map((item) => {
+    if (!this.state.web3 || !this.state.members) {
+      return <div style={{color:"white"}}>Loading Web3, accounts, and contract...</div>
+    }
+
+    const items = this.state.members.map((item) => {
       const url = `https://ipfs.io/ipfs/${item.cid}`;
 
       const liststyle = {
