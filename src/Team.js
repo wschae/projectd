@@ -14,13 +14,14 @@ class Team extends Component {
       {name: 'jskim', cid: 'QmWeS7u5pDTkyBBKaw3ywJs2yXS4pftQEy2PiYfNWpGQnQ'},
       {name: 'cyoh', cid: 'QmT65VLCj2K5YW7k4Tomagg1VTz6fCtvSPJk1FCFpvT3wf'},
       {name: 'limseok', cid: 'QmSRejaN4iY4EJSxAzjD9XXw29o3AD5DhKbWe2SkGhQ3vu'},
-      {name: 'johnson', cid: 'QmaF5m9g6jm7ZainvX3JxLp1c6WXoNH6Js4macN7F14b2q'}
+      {name: 'johnson', cid: 'QmaF5m9g6jm7ZainvX3JxLp1c6WXoNH6Js4macN7F14b2q'},
+      {name: 'swkim_19', cid: 'QmcFk9ycJ8zKGEagApt8gupUQCW5UiyNKvbDmNW9iUMvj2'},
     ]
   }
 
   render() {
     const items = this.state.response.map((item) => {
-      const url = `https://ipfs.io/ipfs/${item.cid}`;
+      const url = `https://gateway.pinata.cloud/ipfs/${item.cid}`;
 
       const liststyle = {
         backgroundImage: `url(${url})`,
